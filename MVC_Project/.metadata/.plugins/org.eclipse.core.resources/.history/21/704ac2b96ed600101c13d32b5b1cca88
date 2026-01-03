@@ -1,0 +1,9 @@
+package com.demo.CategoryMicroWebService.service;
+
+import com.demo.CategoryMicroWebService.beans.Category;
+
+public interface CategoryService {
+
+	Category getById(int cid);
+
+}

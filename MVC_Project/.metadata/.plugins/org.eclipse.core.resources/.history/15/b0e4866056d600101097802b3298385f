@@ -1,0 +1,5 @@
+package com.demo.CategoryMicroWebService.beans;
+
+public class Category {
+
+}

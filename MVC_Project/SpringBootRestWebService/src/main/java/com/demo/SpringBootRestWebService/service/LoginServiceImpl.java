@@ -1,0 +1,18 @@
+package com.demo.SpringBootRestWebService.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.demo.SpringBootRestWebService.beans.MyUser;
+
+@Service	
+public class LoginServiceImpl implements LoginService {
+@Autowired
+LoginService ldao;
+	@Override
+	public MyUser validateUser(String uname, String passwd) {
+		// TODO Auto-generated method stub
+		return ldao.validateUser(uname, passwd);
+	}
+
+}

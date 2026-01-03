@@ -1,0 +1,27 @@
+package com.demo.CategoryMicroWebService.service;
+
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.demo.CategoryMicroWebService.beans.Category;
+import com.demo.CategoryMicroWebService.dao.CategoryDao;
+
+@Service
+public class CategoryServiceImpl implements CategoryService {
+	@Autowired
+	private CategoryDao cdao;
+
+	@Override
+	public Category getById(int cid) {
+		// TODO Auto-generated method stub
+		Optional<Category>op=cdao.findId(cid);
+		if(op.isPresent())
+		{
+			return op.get();
+		}
+		return null;
+	}
+
+}

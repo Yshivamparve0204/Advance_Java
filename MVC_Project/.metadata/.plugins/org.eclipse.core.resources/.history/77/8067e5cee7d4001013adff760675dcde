@@ -1,0 +1,5 @@
+package com.demo.SpringBootDemo.dao;
+
+public interface ProductDao {
+
+}

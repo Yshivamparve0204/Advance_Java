@@ -1,0 +1,5 @@
+package com.demo.SpringBootRestWebService.service;
+
+public interface LoginService {
+	MyUSer validateUser(String uname, String passwd);
+}

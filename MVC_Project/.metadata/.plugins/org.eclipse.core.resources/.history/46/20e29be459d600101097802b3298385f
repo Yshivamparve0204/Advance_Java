@@ -1,0 +1,5 @@
+package com.demo.CategoryMicroWebService.dto;
+
+public class ProductDto {
+
+}

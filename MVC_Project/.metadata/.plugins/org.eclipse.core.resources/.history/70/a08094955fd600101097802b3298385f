@@ -1,0 +1,10 @@
+package com.demo.ProductMicroWebService.mapper;
+
+import com.demo.ProductMicroWebService.beans.Product;
+
+public class ProductDtoMapper {
+
+	public static Product mapToProduct(Productdto p) {
+		return new Product(p.get)
+	}
+}

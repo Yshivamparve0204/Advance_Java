@@ -1,0 +1,12 @@
+package com.demo.SpringBootFullStackDemo.mapper;
+
+import com.demo.SpringBootFullStackDemo.beans.Product;
+import com.demo.SpringBootFullStackDemo.dto.ProductDto;
+
+public class ProductDtoMapper {
+	public static Product MapToProduct(ProductDto p)
+	{
+		return new Product(p.get)
+	}
+
+}

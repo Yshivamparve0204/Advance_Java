@@ -1,0 +1,5 @@
+package com.demo.ProductMicroWebService.dao;
+
+public interface ProductDao {
+
+}

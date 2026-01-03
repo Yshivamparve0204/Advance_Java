@@ -1,0 +1,5 @@
+package com.demo.SpringBootMvcCrudProject.controller;
+
+public class HelloController {
+
+}

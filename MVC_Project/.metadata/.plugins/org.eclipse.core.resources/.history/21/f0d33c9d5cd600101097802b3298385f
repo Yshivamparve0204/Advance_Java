@@ -1,0 +1,5 @@
+package com.demo.ProductMicroWebService.beans;
+
+public class Product {
+
+}

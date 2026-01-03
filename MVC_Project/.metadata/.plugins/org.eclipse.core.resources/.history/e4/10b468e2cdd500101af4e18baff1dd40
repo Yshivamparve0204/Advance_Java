@@ -1,0 +1,5 @@
+package com.demo.SpringBootRestWebService.dao;
+
+public class ProductServiceImpl implements ProductService{
+
+}

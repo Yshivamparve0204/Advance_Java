@@ -1,0 +1,12 @@
+package com.demo.SpringBootDemo.mapper;
+
+import com.demo.SpringBootDemo.bean.Product;
+
+public class ProductDtoMapper {
+
+	public static Object mapToProductDto(Product prod) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

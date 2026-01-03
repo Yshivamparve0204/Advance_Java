@@ -1,0 +1,16 @@
+package com.demo.SpringBootRestWebService.service;
+
+import org.springframework.stereotype.Service;
+
+import com.demo.SpringBootRestWebService.beans.MyUser;
+
+@Service
+public class LoginServiceImpl implements LoginService {
+
+	@Override
+	public MyUser validateUser(String uname, String passwd) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

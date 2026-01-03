@@ -1,0 +1,22 @@
+package com.demo.SpringBootRestWebService.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.demo.SpringBootRestWebService.dao.ProductDao;
+import com.demo.SpringBootRestWebService.dto.ProductDto;
+
+
+@Service
+public class ProductServiceImpl implements ProductService{
+	@Autowired
+ProductDao pdao;
+
+	@Override
+	public List<ProductDto> getAllProducts() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+}

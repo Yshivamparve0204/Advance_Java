@@ -1,0 +1,17 @@
+package com.demo.controller;
+
+import org.springframework.stereotype.Controller;
+
+@Controller
+public class HelloController {
+	
+	public String sayHello() {
+		return "hello";
+	}
+	
+	public ModelAndView sayWelcome() {
+		String msg= "welcome to aatpadi";
+		return ModelAndView("welcome","message",msg);
+	}
+
+}

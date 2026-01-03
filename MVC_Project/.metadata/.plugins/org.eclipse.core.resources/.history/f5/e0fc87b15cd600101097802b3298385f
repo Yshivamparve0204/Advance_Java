@@ -1,0 +1,23 @@
+package com.demo.ProductMicroWebService.beans;
+
+import java.time.LocalDate;
+
+import org.springframework.format.annotation.DateTimeFormat;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name="product1")
+public class Product {
+	@Id
+private int pid;
+private String pname;
+private int qty;
+private double price;
+@DateTimeFormat(pattern="yyyy-MM-dd")
+private LocalDate mfgdate;
+private int cid;
+
+}

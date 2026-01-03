@@ -1,0 +1,14 @@
+package com.demo.SpringBootMvcCrudProject.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
+public class HelloController {
+	@GetMapping("/hello")
+public String sayHello()
+{
+	String msg="hello welcome to spring boot";
+	return new ModelAndView("hello","msg",msg);
+}
+}

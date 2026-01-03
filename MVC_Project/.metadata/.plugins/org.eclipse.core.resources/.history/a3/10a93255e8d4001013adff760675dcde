@@ -1,0 +1,14 @@
+package com.demo.SpringBootDemo.dao;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.demo.SpringBootDemo.bean.Product;
+@Repository
+public interface ProductDao  extends JpaRepository<Product,Integer> {
+@Query(value="select * from product1 where price between:lprice and :hprice ",nativeQuery=true)
+List<Product> findByPrice(double lprice, double hprice);
+
+@Procedure(procedureName = "getCount")
+public int getCount();
+}

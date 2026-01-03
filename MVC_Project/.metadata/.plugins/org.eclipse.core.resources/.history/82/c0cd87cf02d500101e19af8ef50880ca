@@ -1,0 +1,5 @@
+package com.demo.SpringBootMvcCrudProject.beans;
+
+public class Product {
+
+}

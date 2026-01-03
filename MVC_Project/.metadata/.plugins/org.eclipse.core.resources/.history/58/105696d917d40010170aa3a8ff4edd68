@@ -1,0 +1,19 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<from action="MyRegistrationDemo1//product/insertProduct" method="post">
+Product Id:=<input type="text" name="pid" value="pid"/>
+Product Name:=<input type="text" name="nm" value="nm"/>
+Product Qty:=<input type="text" name="qt" value="qt"/>
+Product Price:=<input type="text" name="price" value="price"/>
+Product Mfgdate:=<input type="date" name="mfgdate" value="mfgdate"/>
+Product Id:=<input type="text" name="cid" value="cid"/>
+<button type="submit" name="btn" id="insert">Add New Product</button>
+</body>
+</html>

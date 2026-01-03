@@ -1,0 +1,10 @@
+package com.demo.SpringBootDemo.dao;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.demo.SpringBootDemo.bean.Product;
+@Repository
+public interface ProductDao  extends JpaRepository<Product,Integer> {
+@Query(value="select * from product1 where price between: ")
+}

@@ -1,0 +1,17 @@
+package com.demo.dao;
+
+import java.util.List;
+
+import org.springframework.stereotype.Repository;
+
+import com.demo.beans.Product;
+
+@Repository
+public class ProductDaoImpl implements ProductDao {
+
+	public List<Product> findAllProducts() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,5 @@
+package com.demo.SpringBootDemo.bean;
+
+public class Product {
+
+}

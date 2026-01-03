@@ -1,0 +1,25 @@
+package com.demo.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.servlet.ModelAndView;
+
+@Controller
+public class HelloController {
+	
+	public String sayHello() {
+		return "hello";
+	}
+	
+	public ModelAndView sayWelcome() {
+		String msg= "welcome to aatpadi";
+		return new ModelAndView("welcome","message",msg);
+	}
+	
+	public String testData(Model mymodel) {
+		mymodel.addAttribute("name","shivam");
+		mymodel.addAttribute("email","shiv@gmail.com");
+		return "testData";
+	}
+
+}

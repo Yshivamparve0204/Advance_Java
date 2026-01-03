@@ -1,0 +1,13 @@
+package com.demo.SpringBootFullStackDemo.service;
+
+import java.util.List;
+
+import com.demo.SpringBootFullStackDemo.dto.ProductDto;
+
+public interface ProductService {
+
+	List<ProductDto> getAllProducts();
+
+	ProductDto FindById(pid);
+
+}

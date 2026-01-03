@@ -1,0 +1,47 @@
+package com.demo.CategoryMicroWebService.beans;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name="category1")
+public class Category {
+	@Id
+private int cid;
+private String cname;
+private String descriptionription;
+public Category() {
+	super();
+	// TODO Auto-generated constructor stub
+}
+public Category(int cid, String cname, String description) {
+	super();
+	this.cid = cid;
+	this.cname = cname;
+	this.description = description;
+}
+public int getCid() {
+	return cid;
+}
+public void setCid(int cid) {
+	this.cid = cid;
+}
+public String getCname() {
+	return cname;
+}
+public void setCname(String cname) {
+	this.cname = cname;
+}
+public String getdescription() {
+	return description;
+}
+public void setdescription(String description) {
+	this.description = description;
+}
+@Override
+public String toString() {
+	return "Category [cid=" + cid + ", cname=" + cname + ", description=" + description + "]";
+}
+
+}

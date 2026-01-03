@@ -1,0 +1,8 @@
+package com.demo.SpringBootRestWebService.service;
+
+public class Snippet {
+	public static void main(String[] args) {
+		return new ProductDto(prod.getPid(),prod.getPname(),prod.getQty(),prod.getPrice(),null,prod.getCid());
+	}
+}
+

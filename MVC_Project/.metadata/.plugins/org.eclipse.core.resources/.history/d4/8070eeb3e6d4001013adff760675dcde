@@ -1,0 +1,5 @@
+package com.demo.SpringBootDemo.dto;
+
+public class ProductDto {
+
+}
