@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="ISO-8859-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #D3CCE3, #E9E4F0);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-image: url("pexels-martabranco-32210639.jpg");
+            background-position: center;
+            background-size: cover;
+            background-size: 100% 100%;
+        }
+
+        /* Container Styling */
+        .container {
+            background: white;
+            width: 400px;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 22px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        /* Form Styling */
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        label {
+            font-weight: bold;
+            font-size: 16px;
+            margin-bottom: 5px;
+            display: block;
+            text-align: left;
+            width: 100%;
+            color: #555;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+            background: #f9f9f9;
+            color: #333;
+        }
+
+        input::placeholder {
+            color: #aaa;
+        }
+
+        /* Button Styling */
+        #btn {
+            width: 100%;
+            background: #4CAF50;
+            height: 45px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            color: white;
+            transition: 0.3s;
+        }
+
+        #btn:hover {
+            background: #45a049;
+        }
+
+        /* Links Styling */
+        .links {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .links a {
+            text-decoration: none;
+            color: #4CAF50;
+            font-size: 14px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .links a:hover {
+            text-decoration: underline;
+            color: #388E3C;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 500px) {
+            .container {
+                width: 90%;
+            }
+
+            .links {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .links a {
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Login</h2>
+        <form action="loginform" method="post">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username">
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password">
+
+            <button id="btn" name="login">Login</button>
+        </form>
+        
+        <div class="links">
+            <a href="register.html">Register Account</a>
+            <a href="forgotPassword.html">Forgot Password</a>
+        </div>
+    </div>
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            let isValid = true;
+
+            // Username validation
+            let username = document.getElementById("username").value;
+            let userError = document.getElementById("userError");
+            if (username.length < 5) {
+                userError.style.display = "block";
+                isValid = false;
+            } else {
+                userError.style.display = "none";
+            }
+
+            // Password validation
+            let password = document.getElementById("password").value;
+            let passError = document.getElementById("passError");
+            let passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
+            if (!passwordRegex.test(password)) {
+                passError.style.display = "block";
+                isValid = false;
+            } else {
+                passError.style.display = "none";
+            }
+
+            // Prevent form submission if validation fails
+            if (!isValid) {
+                event.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>
